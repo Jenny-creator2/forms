@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3</title>
+</head>
+    <body>
+        <form action="">
+            <input type = "text" id= "txt1">
+            <input type = "text" id= "txt2">
+            <input type = "text" id= "txt3">
+            <input type = "text" id= "txt4">
+        </form>
+        <script>
+            document.body.onmouseover=function(){
+                let elem=event.target;
+                if (elem.type == "text")
+                {
+                    elem.focus();
+                    elem.value=elem.id;
+                }
+            }
+            document.body.onmouseout=function(){
+                let elem=event.target;
+                if (elem.type == "text")
+                {
+                    elem.blur();
+                    elem.value="";
+                }   
+            }     
+        </script>
+    </body>
+</html>

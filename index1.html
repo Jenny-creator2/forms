@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1</title>
+</head>
+<body>
+    <p>Подтверждение действия:</p>
+    <form id="form1" >
+        <button type="button" id="btn1">Подтвердить</button>
+        <p>Сообщение: <input type="text" id="message" readonly></p>
+        <label><input type="checkbox" id="c1"> Чекбокс</label>
+    </form>
+
+    <script>
+        document.getElementById('btn1').addEventListener('click', function() {
+            if (confirm('Вы уверены?')) {
+                document.getElementById('message').value = 'Действие подтверждено!';
+                document.getElementById('c1').checked = true;
+            } else {
+                document.getElementById('form1').reset();
+            }
+        });
+    </script>
+</body>
+</html>
